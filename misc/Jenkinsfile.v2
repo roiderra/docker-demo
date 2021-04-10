@@ -28,5 +28,5 @@ node {
        def app = docker.build("roiderra/docker-nodejs-demo:${commit_id}", '.').push()
      }                                     
    }  
-office365ConnectorSend message: "Finished ${env.JOB_NAME} build № ${env.BUILD_NUMBER} ${env.BUILD_URL}", status: 'Succesful Build', webhookUrl: "${env.noti}" 
+office365ConnectorSend message: "Finished ${env.JOB_NAME} build № ${env.BUILD_NUMBER} ${env.BUILD_URL}console", status: 'Succesful Build', webhookUrl: "${env.noti}" 
 }                                          
